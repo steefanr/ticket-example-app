@@ -3,7 +3,7 @@ import { TicketRepo } from "@src/repos/ticket-repo";
 
 
 export class TicketService {
-    static addBlogPost(ticket: Ticket): Promise<void> {
+    static addTicket(ticket: Ticket): Promise<void> {
         return TicketRepo.addTicket(ticket);
     }
 }

@@ -31,7 +31,7 @@ async function addTicket(req: Request<Ticket>, res: Response) {
         return res.status(HttpStatusCodes.UNPROCESSABLE_ENTITY).json({ error: error });
     }
 
-    await TicketService.addBlogPost({ user_id, title, tags });
+    await TicketService.addTicket({ user_id, title, tags });
 
     return res.status(HttpStatusCodes.OK).json({ message: "Ticket Added Successfully!" })
 

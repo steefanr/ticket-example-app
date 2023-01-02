@@ -13,7 +13,7 @@ export class TicketRepo {
         db.tickets = [...db.tickets, ticket];
 
 
-        if (TicketRepo.max_tag === '') {
+        if (TicketRepo.max_tag === '' && Object.keys(db.tags).length > 0) {
             TicketRepo.max_tag = Object.keys(db.tags).reduce((a, b) => db.tags[a] > db.tags[b] ? a : b)
             console.log(this.max_tag)
             TicketRepo.max_count = db.tags[TicketRepo.max_tag]
